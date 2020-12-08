@@ -12,16 +12,16 @@
             <input type="text"  placeholder="Maalin nimi" name="Nimi" />
 <br>
         Hinta:
-            <input type="number"  placeholder="00.00€/L" name="Hinta" />
+            <input type="number"  placeholder="00.00€/L" name="Hinta" min="0" step="0.01"/>
 <br>
         Riittoisuus:
             <input type="text"  placeholder="Maalin riittoisuus m2/L" name="Riittoisuus" />
 <br>
         Määrä:
-            <input type="text"  placeholder="Maalauskertojen määrä" name="määrä" />
+            <input type="number"  placeholder="Maalauskertojen määrä" name="määrä" min="0" />
         </label>
 <br>
-<input type="submit" value="Submit" />
+<input type="submit" value="Lähetä" />
     </form>
 </body>
 </html>
