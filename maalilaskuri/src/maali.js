@@ -1,4 +1,5 @@
 //Maali on objekti
+//Halutaan maalin tiedot käyttäjältä
 
 const maali = {
     nimi: "maali1",
