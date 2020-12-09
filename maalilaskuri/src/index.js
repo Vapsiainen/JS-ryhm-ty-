@@ -1,17 +1,36 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-//import './index.css';
-import App from './App';
-//import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+class Form extends React.Component {
+  render() {
+    return (
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-//reportWebVitals();
+      <form>
+
+        <h1>Maalilaskuri</h1>
+
+        <label>
+
+            Nimi:
+            <input type="text"  placeholder="Maalin nimi" name="Nimi" />
+            <br />
+
+            Hinta:
+            <input type="text"  placeholder="Maalin hinta/m2" name="Hinta" />
+            <br />
+
+            Riittoisuus:
+            <input type="text"  placeholder="Maalin riittoisuus/litra" name="Riittoisuus" />
+            <br />
+
+            Määrä:
+            <input type="number"  placeholder="Maalauskertojen määrä" name="määrä" min="1" />
+
+        </label>
+
+      </form>
+    );
+  }
+}
+
+ReactDOM.render(<Form />, document.getElementById("root"));
