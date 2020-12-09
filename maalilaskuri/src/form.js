@@ -8,24 +8,22 @@ function Form() {
 
             <h1>Maalilaskuri</h1>
 
-            <label>
+            <label for="Nimi">Nimi:</label>
+            <input type="text" placeholder="Maalin nimi" id="Nimi" />
+            <br />
 
-                Nimi:
-            <input type="text" placeholder="Maalin nimi" name="Nimi"/>
-                <br />
+            <label for="Hinta">Hinta:</label>
+            <input type="text" placeholder="Maalin hinta/m2" id="Hinta" />
+            <br />
 
-            Hinta:
-            <input type="text" placeholder="Maalin hinta/m2" name="Hinta" />
-                <br />
+            <label for="Riittoisuus">Riittoisuus:</label>
+            <input type="text" placeholder="Maalin riittoisuus/litra" id="Riittoisuus" />
+            <br />
 
-            Riittoisuus:
-            <input type="text" placeholder="Maalin riittoisuus/litra" name="Riittoisuus" />
-                <br />
-
-            Määrä:
-            <input type="number" placeholder="Maalauskertojen määrä" name="määrä" min="1" />
-
-            </label>
+            <label for="Määrä">Määrä:</label>
+            <input type="number" placeholder="Maalauskertojen määrä" id="Määrä" min="1" />
+            <br />
+            <br />
 
         </form>
     );
