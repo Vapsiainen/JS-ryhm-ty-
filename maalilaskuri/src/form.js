@@ -1,17 +1,27 @@
 //Tässä tiedostossa on itse form eli komponentti joka sisältää tekstikentät, napit yms.
+//Muuta Hinta ja Riittoisuus kentiksi jotka ottavat numeroita vastaan
 
-import React from "react";
+import React, { useState } from "react";
 
 function Form() {
 
+    const [name, setName] = useState("");
+
+
+    const handleChange = (event) => {
+        setName(event.target.value);
+    }
+
     return (
 
-        <form>
+        <div>
 
             <h1>Maalilaskuri</h1>
 
-            <label for="Nimi">Nimi:</label>
-            <input type="text" placeholder="Maalin nimi" id="Nimi" />
+            <form>
+
+            <label for="Nimi">Nimi: {" "}</label>
+            <input type="text" placeholder="Maalin nimi" id="Nimi" value={name} onChange={handleChange}/>
             <br />
 
             <label for="Hinta">Hinta:</label>
@@ -27,7 +37,14 @@ function Form() {
             <br />
             <br />
 
-        </form>
+            <input type="submit" value="Submit"/>
+
+            </form>
+
+            <h3>Maalin nimi: {name} </h3>
+
+        </div>
+
     );
 }
 
