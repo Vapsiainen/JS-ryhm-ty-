@@ -1,3 +1,5 @@
+//Tässä tiedostossa on itse form eli komponentti joka sisältää tekstikentät, napit yms.
+
 import React from "react";
 
 function Form() {

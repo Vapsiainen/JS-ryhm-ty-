@@ -1,3 +1,4 @@
+//Tila-objekti
 // Näitä ei syötetä www-sivuille
 
 const tila = {
