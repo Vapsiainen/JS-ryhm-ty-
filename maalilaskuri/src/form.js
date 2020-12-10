@@ -15,9 +15,12 @@ function Form() {
     return (
 
         <div>
-
+            <img src="/images/kuva.png.jpg" alt=""/>    
+            
             <h1>Maalilaskuri</h1>
-
+        
+        
+           
             <form>
 
             <label for="Nimi">Nimi: {" "}</label>
