@@ -2,14 +2,15 @@
 //Muuta Hinta ja Riittoisuus kentiksi jotka ottavat numeroita vastaan
 
 import React, { useState } from "react";
+import Tila from "./tila";
 
 function Form() {
 
     const [state, setState] = useState({
         nimi: "",
-        hinta: "",
-        riittoisuus: "",
-        määrä: "",
+        hinta: 0,
+        riittoisuus: 0,
+        määrä: 0,
     })
 
 
@@ -20,9 +21,9 @@ function Form() {
         })
     }
 
-    function laske(a, b) {
-        let sum = a+b;
-        return sum;
+    function laskeMääräJaHinta(pinta_ala, riittoisuus, tyyppikerroin) {
+        let tulos = (pinta_ala/riittoisuus) * tyyppikerroin;
+        return tulos;
     }
 
     return (
@@ -61,7 +62,7 @@ function Form() {
             <h3>Maalin hinta: {state.hinta} </h3>
             <h3>Maalin riittoisuus: {state.riittoisuus} </h3>
             <h3>Maalin määrä: {state.määrä} </h3>
-            <h3>Maalin hinta on: {laske(Number(state.hinta), 10)} euroa</h3>
+            <h3>Tarvittava maalin määrä on:  euroa</h3>
 
         </div>
 
