@@ -46,7 +46,7 @@ function Form() {
             <br />
             <br />
 
-            <input type="submit" value="Submit"/>
+            <input type="submit" value="Laske"/>
 
             </form>
 

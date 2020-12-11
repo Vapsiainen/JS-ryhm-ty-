@@ -12,7 +12,19 @@ img {
 }
 
 h1 {
-  font-size: x-large;
+  font-size: 150;
   font-family: 'Cinzel', serif;
 }
 
+h3 {
+  font-size: large;
+  font-family: 'Cinzel', serif ;
+}
+
+label {
+  font-size: small;
+}
+
+input {
+  color: black;
+}
