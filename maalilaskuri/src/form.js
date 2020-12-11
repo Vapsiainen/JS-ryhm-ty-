@@ -5,11 +5,17 @@ import React, { useState } from "react";
 
 function Form() {
 
-    const [name, setName] = useState("");
+    const [state, setState] = useState({
+        nimi: "",
+        hinta: "",
+    })
 
 
     const handleChange = (event) => {
-        setName(event.target.value);
+        setState({
+            ...state,
+            [event.target.name]: event.target.value,
+        })
     }
 
     return (
@@ -24,11 +30,11 @@ function Form() {
             <form>
 
             <label for="Nimi">Nimi: {" "}</label>
-            <input type="text" placeholder="Maalin nimi" id="Nimi" value={name} onChange={handleChange}/>
+            <input type="text" placeholder="Maalin nimi" id="Nimi" name="nimi" value={state.nimi} onChange={handleChange}/>
             <br />
 
-            <label for="Hinta">Hinta:</label>
-            <input type="text" placeholder="Maalin hinta/m2" id="Hinta" />
+            <label for="Hinta">Hinta: {" "}</label>
+            <input type="text" placeholder="Maalin hinta/m2" id="Hinta"  name="hinta" value={state.hinta} onChange={handleChange}/>
             <br />
 
             <label for="Riittoisuus">Riittoisuus:</label>
@@ -44,7 +50,8 @@ function Form() {
 
             </form>
 
-            <h3>Maalin nimi: {name} </h3>
+            <h3>Maalin nimi: {state.nimi} </h3>
+            <h3>Maalin hinta: {state.hinta} </h3>
 
         </div>
 
