@@ -10,3 +10,9 @@ img {
   height: 300px;
   width: auto;
 }
+
+h1 {
+  font-size: x-large;
+  font-family: 'Cinzel', serif;
+}
+
