@@ -1,6 +1,7 @@
 //Tässä tiedostossa on itse form eli komponentti joka sisältää tekstikentät, napit yms.
 
 import React from "react";
+import kuva from "./kuva.jpg";
 
 class Form extends React.Component {
 
@@ -40,6 +41,8 @@ class Form extends React.Component {
             <div>
 
                 <h1>Maalilaskuri</h1>
+
+                <img src={kuva} alt=""/>
 
                 <form>
 
