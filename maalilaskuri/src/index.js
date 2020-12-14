@@ -1,9 +1,10 @@
-//Form-komponentin renderöinti tapahtuu täällä
+//App-komponentti, joka pitää sisällään kaikki alikomponentit, renderöidään täällä
 
 import React from "react";
 import ReactDOM from "react-dom";
-import Form from "./form"
-import './App.css'
+import App from "./App"
+import Form from "./Form";
+import TestiForm from "./testialue";
 
 
-ReactDOM.render(<Form />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));

@@ -1,69 +1,79 @@
 //Tässä tiedostossa on itse form eli komponentti joka sisältää tekstikentät, napit yms.
 
-import React, { useState } from "react";
-import Tila from "./tila";
+import React from "react";
 
-function Form() {
+class Form extends React.Component {
 
-    const [state, setState] = useState({
-        nimi: "",
-        hinta: "",
-        riittoisuus: "",
-        määrä: "",
-    })
+    constructor() {
+        super();
+        this.state = {
+            nimi: null,
+            hinta: null,
+            riittoisuus: null,
+            määrä: null,
+            asunnot: [],
+        }
+
+        this.handleChange = this.handleChange.bind(this);
+    }
 
 
-    const handleChange = (event) => {
-        setState({
-            ...state,
-            [event.target.name]: event.target.value,
+    handleChange = (event) => {
+        this.setState({
+            [event.target.name]: event.target.value
         })
     }
 
-    function laskeMääräJaHinta(pinta_ala, riittoisuus, tyyppikerroin) {
-        let tulos = (pinta_ala/riittoisuus) * tyyppikerroin;
-        return tulos;
+    laskeLitrat = (pinta_ala, riittoisuus, tyyppikerroin) => {
+        let litrat = ((pinta_ala / riittoisuus) * tyyppikerroin);
+        return litrat;
     }
 
-    return (
+    componentDidMount() { 
+    }
 
-        <div>
-            <img src="/images/kuva.png.jpg" alt=""/>    
-            
-            <h1>Maalilaskuri</h1>
 
-            <form>
+    render() {
 
-            <label for="Nimi">Nimi: {" "}</label>
-            <input type="text" placeholder="Maalin nimi" id="Nimi" name="nimi" value={state.nimi} onChange={handleChange}/>
-            <br />
+        return (
 
-            <label for="Hinta">Hinta: {" "}</label>
-            <input type="text" placeholder="Maalin hinta/m2" id="Hinta"  name="hinta" value={state.hinta} onChange={handleChange}/>
-            <br />
+            <div>
 
-            <label for="Riittoisuus">Riittoisuus: {" "}</label>
-            <input type="text" placeholder="Maalin riittoisuus/litra" id="Riittoisuus" name="riittoisuus" value={state.riittoisuus} onChange={handleChange} />
-            <br />
+                <h1>Maalilaskuri</h1>
 
-            <label for="Määrä">Määrä: {" "}</label>
-            <input type="text" placeholder="Maalauskertojen määrä" id="Määrä" name="määrä" min="1" value={state.määrä} onChange={handleChange}/>
-            <br />
-            <br />
+                <form>
 
-            <input type="submit" value="Laske"/>
+                    <label for="Nimi">Nimi: {" "}</label>
+                    <input type="text" placeholder="Maalin nimi" id="1" name="nimi" value={this.state.nimi} onChange={this.handleChange} />
+                    <br />
 
-            </form>
+                    <label for="Hinta">Hinta: {" "}</label>
+                    <input type="text" placeholder="Maalin hinta euroina" id="2" name="hinta" value={this.state.hinta} onChange={this.handleChange} />
+                    <br />
 
-            <h3>Maalin nimi: {state.nimi} </h3>
-            <h3>Maalin hinta: {state.hinta} </h3>
-            <h3>Maalin riittoisuus: {state.riittoisuus} </h3>
-            <h3>Maalauskertojen määrä: {state.määrä} </h3>
-            <h3>Tarvittava maalin määrä on:  euroa</h3>
+                    <label for="Riittoisuus">Riittoisuus: {" "}</label>
+                    <input type="text" placeholder="Maalin riittoisuus litroina" id="3" name="riittoisuus" value={this.state.riittoisuus} onChange={this.handleChange} />
+                    <br />
 
-        </div>
+                    <label for="Määrä">Määrä: {" "}</label>
+                    <input type="text" placeholder="Maalauskertojen määrä" id="4" name="määrä" min="1" value={this.state.määrä} onChange={this.handleChange} />
+                    <br />
 
-    );
+                    <button onChange={this.handleChange}>Lähetä</button>
+                    <br />
+
+                </form>
+
+                <h3>Maalin nimi: {this.state.nimi} </h3>
+                <h3>Maalin hinta: {this.state.hinta} </h3>
+                <h3>Maalin riittoisuus: {this.state.riittoisuus} </h3>
+                <h3>Maalauskertojen määrä: {this.state.määrä} </h3>
+                <h3></h3>
+
+            </div>
+        );
+    }
 }
 
 export default Form;
+
