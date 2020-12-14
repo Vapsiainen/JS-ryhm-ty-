@@ -61,7 +61,7 @@ class Form extends React.Component {
                     <label for="Määrä">Määrä: {" "}</label>
                     <input type="text" placeholder="Maalauskertojen määrä" id="4" name="määrä" min="1" value={this.state.määrä} onChange={this.handleChange} />
                     <br />
-
+                    <br />
                     <button onChange={this.handleChange}>Lähetä</button>
                     <br />
 
