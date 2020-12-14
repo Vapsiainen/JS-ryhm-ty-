@@ -30,7 +30,7 @@ class Form extends React.Component {
         return litrat;
     }
 
-    componentDidMount() { 
+    componentDidMount() {
     }
 
 
