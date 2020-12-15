@@ -1,0 +1,73 @@
+
+[
+    {
+        "asunnot": {
+
+            "AsuntoA": {
+                "id": 1,
+                "kokonais_pinta_ala": 70,
+                "tyyppikerroin": 1.5,
+
+                "keittiö": {
+                    "pinta_ala": 15,
+                    "tyyppikerroin": 1.5
+                },
+
+                "olohuone": {
+                    "pinta_ala": 25,
+                    "tyyppikerroin": 1.5
+                },
+
+                "makuuhuone": {
+                    "pinta_ala": 15,
+                    "tyyppikerroin": 1.5
+                }
+
+            },
+
+            "AsuntoB": {
+                "id": 2,
+                "kokonais_pinta_ala": 100,
+                "tyyppikerroin": 1,
+
+                "keittiö": {
+                    "pinta_ala": 25,
+                    "tyyppikerroin": 1
+                },
+
+                "olohuone": {
+                    "pinta_ala": 35,
+                    "tyyppikerroin": 1
+                },
+
+                "makuuhuone": {
+                    "pinta_ala": 15,
+                    "tyyppikerroin": 1
+                }
+
+            },
+
+            "AsuntoC": {
+                "id": 3,
+                "kokonais_pinta_ala": 60,
+                "tyyppikerroin": 1.2,
+
+                "keittiö": {
+                    "pinta_ala": 12,
+                    "tyyppikerroin": 1.2
+                },
+
+                "olohuone": {
+                    "pinta_ala": 18,
+                    "tyyppikerroin": 1.2
+                },
+
+                "makuuhuone": {
+                    "pinta_ala": 13,
+                    "tyyppikerroin": 1.2
+                }
+
+            }
+        }
+    }
+]
