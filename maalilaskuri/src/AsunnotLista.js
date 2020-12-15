@@ -2,21 +2,16 @@
 //Objekteja arrayn sisällä
 
 import React from "react";
-import asunnotData from "./asunnotData.json"
 
 class AsunnotLista extends React.Component {
 
+    constructor(props) {
+        super(props);
+    }
+
     render() {
-
-        return (
-
-            <div>
-
-                {asunnotData.map((juttu, id) => {
-                    
-                })}
-
-            </div>
+        return(
+            <h1>Moi</h1>
         )
     }
 }
